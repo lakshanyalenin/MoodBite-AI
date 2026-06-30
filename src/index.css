@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+body {
+  background-color: #FFF8E8;
+  background-image: radial-gradient(at 0% 0%, rgba(255, 255, 255, 0.4) 0, transparent 50%),
+                    radial-gradient(at 50% 0%, rgba(245, 158, 11, 0.05) 0, transparent 50%),
+                    radial-gradient(at 100% 0%, rgba(34, 197, 94, 0.05) 0, transparent 50%);
+  background-attachment: fixed;
+  transition: background-color 0.5s ease;
+}
+
+.dark body {
+  background-color: #0A0D14;
+  background-image: radial-gradient(at 0% 0%, rgba(15, 23, 42, 0.3) 0, transparent 50%),
+                    radial-gradient(at 50% 0%, rgba(245, 158, 11, 0.02) 0, transparent 50%),
+                    radial-gradient(at 100% 0%, rgba(34, 197, 94, 0.02) 0, transparent 50%);
+}
+
+/* Custom styles for premium glassmorphism and beautiful scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.5);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.03);
+}
+
+.dark .glass-card {
+  background: rgba(15, 22, 38, 0.45);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}

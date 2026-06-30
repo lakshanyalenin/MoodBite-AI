@@ -1,0 +1,6 @@
+{
+  "name": "MoodBite AI",
+  "description": "Your Mood. Your Meal. Your Health. Intelligent AI-powered personalized meal recommendations, weekly planning, ingredient scanning, family mode, and calories tracking.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
